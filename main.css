@@ -1,0 +1,221 @@
+body {
+    font-family: 'Spartan';
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    background-color: hsl(180, 52%, 96%);
+    flex-direction: column;
+}
+
+.header {
+    width: 100%;
+    height: 100px;
+    background-color: hsl(180, 29%, 50%);
+    background-image: url(images/bg-header-desktop.svg);
+    background-size: 100% 100px;
+    background-repeat: no-repeat;
+    background-position: top;
+}
+
+section {
+    width: 800px;
+    margin: -25px 0 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section form {
+    width: 740px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 2px 9px 2px hsl(180, 31%, 85%);
+}
+
+.res {
+    width: 400px;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+form a {
+    color: hsl(180, 8%, 52%);
+    font-size: small;
+    cursor: pointer;
+    visibility: hidden;
+}
+
+input {
+    padding: 10px 20px;
+    border: none;
+}
+
+input:focus {
+    outline: none;
+}
+
+.alert {
+    width: 740px;
+    border-radius: 5px;
+    padding: 15px 30px;
+    align-items: center;
+    margin-top: 30px;
+    background-color: white;
+    box-shadow: 0px 2px 9px 2px hsl(180, 10%, 79%);
+}
+
+.father {
+    width: 740px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 30px;
+    overflow: hidden;
+    align-items: center;
+    margin-top: 30px;
+    background-color: white;
+    box-shadow: 0px 2px 9px 2px hsl(180, 10%, 79%);
+    transition: all .2s ease;
+}
+
+.father:hover {
+    border-left: 5px solid hsl(180, 29%, 50%);
+    transform: scale(1.1);
+}
+
+.father ul {
+    display: flex;
+    list-style: none;
+}
+
+li {
+    color: hsl(180, 29%, 50%);
+    background-color: hsl(180, 31%, 95%);
+    padding: 5px;
+    border-radius: 2px;
+    margin: 3px;
+    font-size: smaller;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+li:hover {
+    color: hsl(180, 31%, 95%);
+    background-color: hsl(180, 29%, 50%);
+}
+
+.son {
+    display: flex;
+    align-items: center;
+}
+
+.son img {
+    width: 75px;
+    height: 75px;
+    margin-right: 10px;
+}
+
+p,
+h4 {
+    margin: 10px 0;
+}
+
+h4:hover {
+    cursor: pointer;
+    color: hsl(180, 29%, 50%);
+}
+
+.firP span:first-of-type {
+    font-size: smaller;
+    font-weight: 700;
+    color: hsl(180, 29%, 50%);
+}
+
+.firP span:nth-of-type(2) {
+    font-size: smaller;
+    font-weight: 700;
+    color: white;
+    padding: 5px;
+    margin: 0 5px;
+    border-radius: 10px;
+    background-color: hsl(180, 29%, 50%);
+}
+
+.firP span:nth-of-type(3) {
+    font-size: smaller;
+    font-weight: 700;
+    color: white;
+    padding: 5px;
+    margin: 0 5px;
+    border-radius: 10px;
+    background-color: black;
+}
+
+.secP {
+    display: flex;
+    align-items: end;
+    color: hsl(180, 8%, 52%);
+    font-size: x-small;
+    font-weight: 500;
+}
+
+.secP span {
+    font-size: large;
+    font-weight: 700;
+    margin: 0px 5px;
+}
+
+@media (max-width: 600px) {
+     :root {
+        --width: calc(100% - 60px)
+    }
+    section {
+        width: 95%;
+        margin: -30px auto 30px;
+    }
+    form {
+        width: var(--width) !important;
+        flex-wrap: wrap;
+    }
+    form>div {
+        width: auto;
+        display: flex;
+        align-items: center;
+    }
+    .alert {
+        width: var(--width);
+    }
+    .father {
+        flex-wrap: wrap;
+        width: var(--width);
+        padding: 20px;
+        overflow: visible;
+        margin-top: 50px;
+    }
+    .son {
+        border-bottom: 1px solid gray;
+        flex-wrap: wrap;
+        justify-content: baseline;
+        position: relative;
+    }
+    .son img {
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        top: -45px;
+    }
+    .grandSon {
+        width: 100%;
+    }
+    ul {
+        padding: 0;
+        flex-wrap: wrap;
+    }
+}
